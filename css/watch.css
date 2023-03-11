@@ -1,0 +1,77 @@
+/* remove effect on card*/
+.card:hover {
+    transform: translateY(0%);
+}
+
+/*align icons*/
+.watch-page .watch-icons {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.watch-icons i:hover {
+    cursor: pointer;
+}
+
+/*hide */
+.watch-page #more {
+    display: none;
+}
+
+/*no shadow when focus on form*/
+.form-control:focus {
+    box-shadow: none;
+}
+
+.card-inner {
+    display: none;
+}
+
+/*comment color*/
+.public-comment .card .btn {
+    background-color: #2386C8;
+    border-color: #2386C8;
+    color: #fff;
+}
+
+.public-comment .card .btn:hover {
+    background-color: #2386C8;
+}
+
+/* time container placement  */
+time {
+    right: 24px !important;
+}
+
+/* change play icon place  */
+.watch-page .fa-play {
+    right: 46% !important;
+}
+
+/* medium media */
+@media (min-width: 992px) {
+    time {
+        font-size: 13px;
+    }
+
+    .fa-play {
+        font-size: 20px !important;
+    }
+}
+
+/* large media */
+@media (max-width: 1062px) {
+
+    #myBtn {
+        margin-bottom: 60px !important;
+    }
+}
+
+/* small media */
+@media (max-width: 570px) {
+
+    .reply-time {
+        font-size: 10px;
+    }
+}

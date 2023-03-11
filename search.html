@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نتائج البحث | يوتيوبي</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body class="mt-5 rtl">
+    <div class="layer"></div>
+
+    <div id="top-menu">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3">
+                <i class="fas fa-bars fa-lg" id="toggler"></i>
+                <b>
+                    <a class="navbar-brand mx-2" href="index.html">
+                        Vidly
+                        <span class="video-icon p-1"><i class="fas fa-play-circle"></i></span>
+                    </a>
+                </b>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item first-list-element">
+                            <a class="nav-link px-3 ml-1 mr-3" href="index.html"> Suggested Videos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 ml-1" href="#"> Recently uploaded</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 ml-1" href="#"> Trending Videos</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search">
+                        <button onclick="location.href='search.html';" class="btn btn-outline-info my-2 my-sm-0"
+                            type="submit">Search</button>
+                    </div>
+                </div>
+                <i class="fas fa-search mr-5 search-icon"></i>
+                <a href="#" class="nav-link login" data-toggle="modal" data-target="#loginModal"> Log In</a>
+            </nav>
+            <input type="search" class="form-control search-input" placeholder="Searching for...">
+
+            <!--------------------------------------------------- Start Modal --------------------------------------------------->
+            <div class="modal fade" id="loginModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"> Log In</h5>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label"> Email:</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-form-label"> Password:</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#"> Reset Password</a>
+                            <a href="#" class="mx-auto"> Create Account</a>
+                            <button type="button" class="btn btn-primary">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------------------------------------------- End Modal --------------------------------------------------->
+
+
+            <!-------------------------------------------- Start Sidebar --------------------------------------------------------->
+            <div class="row pt-4">
+                <div id="wrap">
+                    <div class="sidebar">
+                        <ul class="list-group list-group-flush pl-0">
+                            <a href="index.html" class="list-group-item list-group-item-action">
+                                <i class="fas fa-home mr-2 purple"></i> Home Page
+                            </a>
+                            <a href="index.html" class="list-group-item list-group-item-action">
+                                <i class="fab fa-algolia mr-2 purple"></i> Suggested Videos
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="far fa-plus-square mr-2 purple"></i>
+                                Recently uploaded
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-fire-alt mr-2 purple"></i> Trending Videos
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-fire-alt mr-2 purple"></i> My Videos
+                            </a>
+                            <a href="log.html" class="list-group-item list-group-item-action">
+                                <i class="fas fa-history mr-2 purple"></i> History
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="far fa-share-square mr-2 purple"></i> Subscriptions
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-film mr-2 purple"></i> Movies & Shows
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-gamepad mr-2 purple"></i> Video Games
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-tshirt mr-2 purple"></i> Fashions & Beauty
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-graduation-cap mr-2 purple"></i> Learning
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-cog mr-2 purple"></i> Settings
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <i class="fas fa-question-circle mr-2 purple"></i> Help
+                            </a>
+                            <a href="https://academy.hsoub.com/store/1-%D8%AF%D9%88%D8%B1%D8%A9-%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D9%88%D8%A7%D8%AC%D9%87%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85/"
+                                class="list-group-item list-group-item-action pb-4">
+                                All rights reserved
+                                &copy; 2023
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------- End Sidebar --------------------------------------------------------->
+
+            <!-------------------------------------------- Start Search  --------------------------------------------------------->
+            <div class="search-header pt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <span class="" id="search-filters-icon"><i class="fas fa-filter"></i> Filters</span>
+                        </div>
+                        <div class="col-6 ">
+                            <span class="float-right"> About 800 results </span>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-6 col-lg-3 filter-column">
+                            <div class="text-center"> UPLOAD DATE
+                            </div>
+                            <hr>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName">
+                                <span> Last hour</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName">
+                                <span>Today</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName">
+                                <span> This week</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName">
+                                <span>This month </span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName">
+                                <span> This year</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3 filter-column">
+                            <div class="text-center">TYPE</div>
+                            <hr>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName2">
+                                <span>Video</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName2">
+                                <span>Channel</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName2">
+                                <span> Playlist</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName2">
+                                <span>Movie</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName2">
+                                <span>Show</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3 filter-column">
+                            <div class="text-center"> SORT BY </div>
+                            <hr>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName3">
+                                <span>Relevance </span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName3">
+                                <span>Upload date </span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName3">
+                                <span> View count</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName3">
+                                <span>Rating</span>
+                            </label>
+                        </div>
+                        <div class="col-md-6 col-lg-3 filter-column">
+                            <div class="text-center">DURATION</div>
+                            <hr>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName4">
+                                <span>Under 4 minutes </span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName4">
+                                <span>4 - 20 minutes</span>
+                            </label>
+                            <label class="d-block mb-3">
+                                <input type="checkbox" name="CheckBoxInputName4">
+                                <span>Over 20 minutes</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------- End Search  --------------------------------------------------------->
+
+            <!-------------------------------------------- main page contenu ----------------------------------------------------->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 my-3">
+                        <div class="card">
+                            <div class="card-horizontal d-md-flex d-block">
+                                <div class="card-icons">
+                                    <a href="watch.html">
+                                        <img class="mr-4 card-top-image size" src="img/thumbnail/thumbnail1.png"
+                                            alt="Card image cap">
+                                        <time>21:42</time>
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-2">
+                                    <a href="watch.html">
+                                        <h4> How To Build Responsive Landing Page</h4>
+                                    </a>
+                                    <p> A responsive landing page is a web page that is designed to
+                                        adapt and
+                                        adjust to different screen sizes and device types, such as
+                                        desktop
+                                        computers, laptops, tablets, and smartphones.
+                                    </p>
+                                    <a href="channel.html" class="channel-img">
+                                        <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                        <span class="card-text"> Elzeo Academy</span>
+                                    </a>
+                                    <small class="text-muted">
+                                        <i class="fas fa-film"></i> <span>1M views </span>
+                                        <i class="fas fa-clock"></i> <span>9 months ago </span>
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 my-3">
+                        <div class="card">
+                            <div class="card-horizontal d-md-flex d-block">
+                                <div class="card-icons">
+                                    <a href="watch.html">
+                                        <img class="mr-4 card-top-image size" src="img/thumbnail/thumbnail2.png"
+                                            alt="Card image cap">
+                                        <time>21:42</time>
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-2">
+                                    <a href="watch.html">
+                                        <h4> Best Frontend RoadMap</h4>
+                                    </a>
+                                    <p> A frontend roadmap typically refers to a plan or guide outlining
+                                        the
+                                        various skills and technologies that a frontend developer should
+                                        learn
+                                        and master in order to become proficient in their field.
+                                    </p>
+                                    <a href="channel.html" class="channel-img">
+                                        <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                        <span class="card-text"> Coder</span>
+                                    </a>
+                                    <small class="text-muted">
+                                        <i class="fas fa-film"></i> <span>4K views </span>
+                                        <i class="fas fa-clock"></i> <span>6 months ago </span>
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 my-3">
+                        <div class="card">
+                            <div class="card-horizontal d-md-flex d-block">
+                                <div class="card-icons">
+                                    <a href="watch.html">
+                                        <img class="mr-4 card-top-image size" src="img/thumbnail/thumbnail-4.png"
+                                            alt="Card image cap">
+                                        <time>21:42</time>
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-2">
+                                    <a href="watch.html">
+                                        <h4> React Native Crash Course | Build a Complete App</h4>
+                                    </a>
+                                    <p> React Native is an open-source mobile application development
+                                        framework
+                                        created by Facebook.
+                                    </p>
+                                    <a href="channel.html" class="channel-img">
+                                        <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                        <span class="card-text"> Coder</span>
+                                    </a>
+                                    <small class="text-muted">
+                                        <i class="fas fa-film"></i> <span>2.3M views </span>
+                                        <i class="fas fa-clock"></i> <span>11 months ago </span>
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 my-3">
+                        <div class="card">
+                            <div class="card-horizontal d-md-flex d-block">
+                                <div class="card-icons">
+                                    <a href="watch.html">
+                                        <img class="mr-4 card-top-image size" src="img/thumbnail/thumbnail7.png"
+                                            alt="Card image cap">
+                                        <time>21:42</time>
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-2">
+                                    <a href="watch.html">
+                                        <h4> Laravel for Beginners Tutorial Step by Step - Elzero Academy</h4>
+                                    </a>
+                                    <p> Laravel is a free, open-source PHP web application framework
+                                        designed
+                                        for web developers who want to build scalable, secure, and
+                                        high-performing web applications. It is known for its elegant
+                                        syntax and
+                                        the many built-in features it offers.
+                                    </p>
+                                    <a href="channel.html" class="channel-img">
+                                        <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                        <span class="card-text"> Elzeo Academy</span>
+                                    </a>
+                                    <small class="text-muted">
+                                        <i class="fas fa-film"></i> <span>1.1M views </span>
+                                        <i class="fas fa-clock"></i> <span>a year ago </span>
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 my-3">
+                        <div class="card">
+                            <div class="card-horizontal d-md-flex d-block">
+                                <div class="card-icons">
+                                    <a href="watch.html">
+                                        <img class="mr-4 card-top-image size" src="img/thumbnail/thumbnail8.png"
+                                            alt="Card image cap">
+                                        <time>21:42</time>
+                                        <i class="fas fa-play fa-2x"></i>
+                                    </a>
+                                </div>
+                                <div class="card-body p-2">
+                                    <a href="watch.html">
+                                        <h4> Learn jQuery for Beginners - Full Course</h4>
+                                    </a>
+                                    <p> jQuery is a fast and concise JavaScript library designed to
+                                        simplify HTML
+                                        document traversal and manipulation, event handling, and AJAX
+                                        interactions for web developers. It is one of the most widely
+                                        used
+                                        JavaScript libraries, and is supported by all modern web
+                                        browsers.
+                                    </p>
+                                    <a href="channel.html" class="channel-img">
+                                        <img src="img/ch-logo.png" alt="" width="30" class="rounded-circle ml-3">
+                                        <span class="card-text"> Coder</span>
+                                    </a>
+                                    <small class="text-muted">
+                                        <i class="fas fa-film"></i> <span>100K views </span>
+                                        <i class="fas fa-clock"></i> <span>5 months ago </span>
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------- main page contenu ----------------------------------------------------->
+
+
+
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/597cb1f685.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
